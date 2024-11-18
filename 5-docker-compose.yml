@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  convos:
+    image: ghcr.io/convos-chat/convos:stable
+    container_name: convos
+    ports:
+      - "2021:3000"
+    volumes:
+      - ${PWD}/convos_data:/data  
+    restart: always  
+
